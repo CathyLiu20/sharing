@@ -27,9 +27,8 @@ LASSO provides a principled way to reduce the number of features in a model by a
 
 XGBoost
 
-XGBoost is an efficient implementation of gradient boosting algorithm, and it is computationally efficient and highly effective, especially for large data samples. Lots of hyperparameters can be tunned, and three important ones are selected due to computation efficiency. Specifically, learning rate, max_depth and min_child_weight are tunned with the 5-fold cross-validation. The MSE from test set is 273433.35   
-
-
-
+XGBoost is an efficient implementation of gradient boosting algorithm, and it is computationally efficient and highly effective, especially for large data samples. Lots of hyperparameters can be tunned, and three important ones are selected due to computation efficiency. Specifically, learning rate, max_depth and min_child_weight are tunned with the 5-fold cross-validation. The MSE from test set is 277977.12, which is slightly larger than linear regression. An exclusive hyperparameter tuning may likely improve the model performance.  
 
 ## Summary 
+
+The news headline is analyzed by NLP and three predictive models are built to use the words to predict user upvotes. LASSO regression outperforms the simple linear regression and XGBoost. The MSE are relatively large and this may due to the sparsity of the 'up_votes' feature. One may choose to categorize the upvotes and build classifers but need to be careful about the 'cut-offs'. Moreover, more efficient and powerful techniques can be used to process the data and build models.  
