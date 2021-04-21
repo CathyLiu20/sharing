@@ -5,7 +5,8 @@
 Attempting to make sense of human behaviors and actions is very interesting, and users' 'like' or 'upvote' for the news/articles may provide important insights for bussiness plans. My goal in this project is to predict the number of upvotes of some news/articles received based on their headline. Since upvotes are an indicator of popularity, I'd like to discover which types of news tend to be the most popular among users. 
 
 ### The Data
-The data used for this projet consist of 509236 records of news title, numbers of upvotes and downvotes, author, news category, date and time created, and age restriction (whether over 18). No missing value appeared in the data. The feature 'up_votes' ranges from 0 to 21253 and is sparse at large values. The categoical features, 'down_votes' and 'category' only has one outcome so they are not very informative. 'Over_18' is binary but only 0.06% has a 'True' value, so it won't help much in the models. 'Author' contains 85838 unique values but hard to do the one-hot encoding. Thus, 'up_votes' and 'title' are of interests and used in the analysis.
+The data used for this projet consist of 509236 records of news title, numbers of upvotes and downvotes, author, news category, date and time created, and age restriction (whether over 18). No missing value appeared in the data. Below table shows the first five samples in the dataset. The feature 'up_votes' ranges from 0 to 21253 and is sparse at large values. The categoical features, 'down_votes' and 'category' only has one outcome so they are not very informative. 'Over_18' is binary but only 0.06% has a 'True' value, so it won't help much in the models. 'Author' contains 85838 unique values but hard to do the one-hot encoding. Thus, 'up_votes' and 'title' are of interests and used in the analysis.
+![Screenshot](data.png)
 
 ### NLP for headline
 
