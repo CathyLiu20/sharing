@@ -23,11 +23,11 @@ Linear regression is straightforward and no hyperparameter tuning is needed. The
 
 LASSO Regression 
 
-LASSO provides a principled way to reduce the number of features in a model by adding a L1 norm peanlty factor. The cross-validation is used to choose the penalty factor (alpha) based on MSE. The model is fitted again using the 'best' penalty factor. The MSE from test set is 273433.35, which is slightly lower than that from linear regression. 
+LASSO provides a principled way to reduce the number of features in a model by adding a L1 norm peanlty factor. The 5-fold cross-validation is used to choose the penalty factor (alpha) based on MSE. The model is fitted again using the selected 'best' penalty factor. The MSE from test set is 273433.35, which is slightly lower than that from linear regression. 
 
 XGBoost
 
-
+XGBoost is an efficient implementation of gradient boosting algorithm, and it is computationally efficient and highly effective, especially for large data samples. Lots of hyperparameters can be tunned, and three important ones are selected due to computation efficiency. Specifically, learning rate, max_depth and min_child_weight are tunned with the 5-fold cross-validation. The MSE from test set is 273433.35   
 
 
 
