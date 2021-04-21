@@ -7,7 +7,7 @@ Attempting to make sense of human behaviors and actions is very interesting, and
 ## The Data
 The data used for this projet consist of 509236 records of news title, numbers of upvotes and downvotes, author, news category, date and time created, and age restriction (whether over 18). No missing value in the data. The feature 'up_votes' ranges from 0 to 21253 and is sparse at large values. The categoical features, 'down_votes' and 'category' only has one outcome so they are not informative. 'Over_18' is binary but only 0.06% has value 'True', so it won't help much in the models. 'Author' contains 85838 unique values but hard to do the one-hot encoding. Thus, 'up_votes' and 'title' are of interests and used in the analysis.
 
-## NLP for Titles
+## NLP for headline
 
 Next, the fun part is to analyze the headline by NPL to extract the occurrence of words within them. The main procedures are word tokenization, removing stop words and stemming, and creating the bag of words and scoring the words. The Python word_tokenize function from nltk library is used to tokenization and TfidfVectorizer is used for scoring. 
 The TFIDF frequency matrix is in the size of 509236 by 1728. 
@@ -31,4 +31,4 @@ XGBoost is an efficient implementation of gradient boosting algorithm, and it is
 
 ## Summary 
 
-The news headline is analyzed by NLP and three predictive models are built to use the words to predict user upvotes. LASSO regression outperforms the simple linear regression and XGBoost. The MSE are relatively large and this may due to the sparsity of the 'up_votes' feature. One may choose to categorize the upvotes and build classifers but need to be very careful about the 'cut-offs'. Another possible strategy is to select the top upvotes (e.g., top 10 percentiles) and their headline to study. It's likely that a stronger relationship can be found, and better models since smaller MSE achieved using current models but data samples only contain top 10 percent upvotes. Moreover, more efficient and powerful techniques can be used to process the data and build models.  
+The news headline is analyzed by NLP and three predictive models are built to use the words to predict user upvotes. LASSO regression outperforms the simple linear regression and XGBoost. The MSE are relatively large and this may due to the sparsity of the 'up_votes' feature. One may choose to categorize the upvotes and build classifers but need to be very careful about the 'cut-offs'. Another possible strategy is to select the top upvotes (e.g., top 10 percentiles) and their headline to study. It's likely that a stronger relationship can be found, and better models since smaller MSE achieved using current models but data samples only contain top 10 percent upvotes. Moreover, more computationly efficient and powerful techniques can be used to process the data and build models.  
