@@ -1,4 +1,4 @@
-# DS Challenge
+# DS Project
 ## Using NLP to predict upvotes based on headline
 &nbsp;
 ### The Task
